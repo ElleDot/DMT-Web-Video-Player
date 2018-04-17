@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body {
+	background-image: url("backgroundImage.jpg");
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 4;
+	padding: 2%;
+}
+
+.warningNotice {
+	grid-row: 1;
+	grid-column: span 12;
+	margin: auto auto auto auto;
+	text-align: center;
+}
+	
+.splashArt {
+	grid-row: 2;
+	grid-column: span 12;
+	max-width: auto;
+	padding: 2%;
+}
+
+.linkPair {
+	transition: transform .2s;
+	grid-row: 3;
+	grid-column: span 12;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 2%;
+}
+
+.linkButton {
+	transition: transform 2s;
+}
+
+.linkButton:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
+.copyrightNotice {
+	grid-row: 4;
+	grid-column: span 12;
+	text-align: center;
+}
+
+img {
+    max-width:100%;
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 2%;
+}
+
+p {
+	font-family: 'Indie Flower', cursive;
+	font-size: 25px;
+	color: #EFEFFE;
+}
