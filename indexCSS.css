@@ -51,7 +51,7 @@ body {
 }
 
 img {
-    max-width:100%;
+    max-width:50%;
     margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -62,4 +62,12 @@ p {
 	font-family: 'Indie Flower', cursive;
 	font-size: 25px;
 	color: #EFEFFE;
+}
+
+h1 {
+	
+	font-family: 'Indie Flower', cursive;
+	font-size: 75px;
+	color: #EFEFFE;
+	
 }
