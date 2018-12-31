@@ -1,26 +1,70 @@
 <!doctype html>
 <html>
-  <head>
-    <title>DMT Documentary: Home</title>
-	<link rel="stylesheet" href="HomepageCSS.css">
-  </head>
-  <body>
-    <!-- <img id="LogoImage" src="logo.png"> -->
+	<head>
+		<title>DMT Documentary: Home</title>
+		<link rel="stylesheet" href="HomepageCSS.css">
+		<script type="text/javascript" src="HomepageJS.js"></script>
+	</head>
+	<body>
+    <h1 id="pageTitle">DMT Documentary: eSports</h1>
     <div class="wrapper">
 		<div class="menu"> <!--START OF MENU -->
     		<div class="linkBar" style="text-align:center">
 	    		<div id="currentPage"><a href="HomepageHTML.html">Play Video</a></div>
-            	<div class="linkBarButton"><a href="Chapter1HTML.html">Chapter 2</a></div>
-            	<div class="linkBarButton"><a href="Chapter2HTML.html">Chapter 3</a></div>
-            	<div class="linkBarButton"><a href="Chapter3HTML.html">Chapter 4</a></div>
+            	<div class="linkBarButton"><a href="CastHTML.html">Cast & Credits</a></div>
+            	<div class="linkBarButton"><a href="AboutHTML.html">About</a></div>
         	</div>
 		</div> <!-- END OF MENU -->
+		<div id="fullscreenOverlayContainer" class="fullscreenOverlay">
+			<div class="fullscreenOverlayContent">
+			    <video muted id="myFullscreenVideo" style=" right: 0; bottom: 0; min-height: 100%; min-width: 100%;">
+				<source autoplay src="Documentary.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+				</video>
+				<a href="javascript:void(0)" class="fullscreenCloseButton" onclick="fullscreenCloseNav()">&times;</a>
+			</div><!-- END OF FULLSCREEN OVERLAY MENU -->
+		</div>
         <div class="content">
-	        <p>This is the start of the website!</p>
+	        <div id="overlayContainer" class="overlay">
+				<a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+				<div class="overlayContent">
+				    <a href="javascript:chapterOneSkip()">Chapter 1: Introduction</a>
+				    <a href="javascript:chapterTwoSkip()">Chapter 2: Misconceptions</a>
+				    <a href="javascript:chapterThreeSkip()">Chapter 3: Technology Evolution</a>
+				    <a href="javascript:chapterFourSkip()">Chapter 4: The Players</a>
+				    <a href="javascript:creditsSkip()">Credits</a>
+				</div><!-- END OF OVERLAY MENU -->
+			</div>
+			<div style="text-align:center;">
+				<button id="restartButton" onclick="restartVideo()">&#9668;&#9668; Restart Video</button>
+				<button id="chapterSelectButton" onclick="openNav()">&#9776; Chapter Select</button>
+				<button id="playPauseButton" onclick="playPauseFunction()">&#9658; Play</button>
+				<button id="fullscreenButton" onclick="goFullscreen()">Fullscreen</button>
+			</div>
+	        <div>
+				<video muted class="centredVideo" id="myVideo" style="display: block">
+					<source src="Documentary.mp4" type="video/mp4">
+					Your browser does not support HTML5 video.
+				</video>
+				<script>
+					var videoPlayer = document.getElementById("myVideo");
+					var playButton = document.getElementById("playPauseButton");
+					var navOverlay = document.getElementById("overlayContainer");
+					var fullscreenNavOverlay = document.getElementById("fullscreenOverlayContainer");
+					
+					function playPauseFunction() {
+						if (videoPlayer.paused) {
+					    	videoPlayer.play();
+							playButton.innerHTML = "&#10074&#10074; Pause";
+						} else {
+					    	videoPlayer.pause();
+							playButton.innerHTML = "&#9658; Play";
+						}	
+					
+					}
+				</script>
+	        </div>
         </div> <!-- END OF CONTENT -->
-        <div class="footer">
-	        <p>This is the start of the end of the first page of the website!</p>
-        </div> <!-- END OF FOOTER -->
-    </div>
+    </div> <!-- END OF WRAPPER -->
   </body>
 </html>

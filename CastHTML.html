@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DMT Documentary: Home</title>
+	<link rel="stylesheet" href="NonVideoCSS.css">
+	<script type="text/javascript" src="HomepageJS.js"></script>
+  </head>
+  <body>
+    <h1 id="pageTitle">DMT Documentary: eSports</h1>
+    <div class="wrapper">
+		<div class="menu"> <!--START OF MENU -->
+    		<div class="linkBar" style="text-align:center">
+	    		<div class="linkBarButton"><a href="HomepageHTML.html">Play Video</a></div>
+            	<div id="currentPage"><a href="CastHTML.html">Cast & Credits</a></div>
+            	<div class="linkBarButton"><a href="AboutHTML.html">About</a></div>
+        	</div>
+		</div> <!-- END OF MENU -->
+        <div class="content">
+	        <div class="sideBySideContent">
+		        <div id="explanation"><p>There were a number of people involved in the creation of this documentary, such as those involved in camera operation, equipment setup and even transportation of crew.</p><hr><p>This page is a designated place for myself to display gratitude to all involved. The list to the right are the people involved in the creation of the documentary, with massive thanks going out to those involved!</p></div>
+		        <div>
+			        <button class="accordion">Louis Agars-Smith</button>
+					<div class="panel">
+					  <p>Producer</p>
+					  <p>Organised, shot and edited the documentary.</p>
+					</div>
+					<button class="accordion">Matthew Robinson</button>
+					<div class="panel">
+					  <p>Set hand & Advisor</p>
+					  <p>Was featured in various shots within the documentary. Also assisted in the music selection of the piece.</p>
+					</div>
+					<button class="accordion">Oliver Moss</button>
+					<div class="finalPanel">
+					  <p>Sound & Camera Operator</p>
+					  <p>Assisted in equipment operation and transportation. Key role in the gathering of media on location in Manchester, UK.</p>
+					</div>
+				</div>
+	        </div>
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+				
+				for (i = 0; i < acc.length; i++) {
+				  acc[i].addEventListener("click", function() {
+				    this.classList.toggle("active");
+				    var panel = this.nextElementSibling;
+				    if (panel.style.maxHeight){
+				      panel.style.maxHeight = null;
+				    } else {
+				      panel.style.maxHeight = panel.scrollHeight + "px";
+				    } 
+				  });
+				}
+				</script>
+        </div> <!-- END OF CONTENT -->
+    </div> <!-- END OF WRAPPER -->
+  </body>
+</html>
