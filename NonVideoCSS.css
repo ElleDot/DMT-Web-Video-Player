@@ -25,6 +25,24 @@
 	text-align: center;
 }
 
+.aboutText {
+	margin: 0 10% 2% 10%;
+	text-align: left;
+}
+
+.listPoint {
+	font-family: "Comfortaa", Helvetica, sans-serif;
+	text-align: left;
+}
+
+ul {
+	padding: 0 35% 0 35%;
+}
+
+.aboutHeading {
+	font-size: 32px;
+}
+
 #currentPage {
 	background-color: #494947;
 }
@@ -50,6 +68,10 @@ body {
 	grid-row: 1;
 	grid-column: span 12;
 	background-color:#999;
+}
+
+ul, li {
+	
 }
 
 .linkBar {

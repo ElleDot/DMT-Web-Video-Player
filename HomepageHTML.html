@@ -17,11 +17,12 @@
 		</div> <!-- END OF MENU -->
 		<div id="fullscreenOverlayContainer" class="fullscreenOverlay">
 			<div class="fullscreenOverlayContent">
-			    <video muted id="myFullscreenVideo" style=" right: 0; bottom: 0; min-height: 100%; min-width: 100%;">
-				<source autoplay src="Documentary.mp4" type="video/mp4">
+			    <video id="myFullscreenVideo" style=" right: 0; bottom: 0; min-height: 100%; min-width: 100%;">
+				<source autoplay src="rendero.mp4" type="video/mp4">
 				Your browser does not support HTML5 video.
 				</video>
-				<a href="javascript:void(0)" class="fullscreenCloseButton" onclick="fullscreenCloseNav()">&times;</a>
+				<a href="javascript:void(0)" class="fullscreenCloseButton" onclick="closeFullscreen()">&times;</a>
+				<a href="javascript:void(0)" id="fullscreenPlayPauseButton" onclick="fullscreenPlayPauseFunction()">&#10074&#10074;</a>
 			</div><!-- END OF FULLSCREEN OVERLAY MENU -->
 		</div>
         <div class="content">
@@ -40,28 +41,21 @@
 				<button id="chapterSelectButton" onclick="openNav()">&#9776; Chapter Select</button>
 				<button id="playPauseButton" onclick="playPauseFunction()">&#9658; Play</button>
 				<button id="fullscreenButton" onclick="goFullscreen()">Fullscreen</button>
+				<button id="muteUnmuteButton" onclick="muteUnmuteFunction()">&#128263; Mute Audio</button>
 			</div>
 	        <div>
-				<video muted class="centredVideo" id="myVideo" style="display: block">
-					<source src="Documentary.mp4" type="video/mp4">
+				<video class="centredVideo" id="myVideo" style="display: block">
+					<source src="rendero.mp4" type="video/mp4">
 					Your browser does not support HTML5 video.
 				</video>
 				<script>
 					var videoPlayer = document.getElementById("myVideo");
+					var fullscreenVideoPlayer = document.getElementById("myFullscreenVideo");
 					var playButton = document.getElementById("playPauseButton");
+					var fullscreenPlayButton = document.getElementById("fullscreenPlayPauseButton");
+					var muteButton = document.getElementById("muteUnmuteButton");
 					var navOverlay = document.getElementById("overlayContainer");
 					var fullscreenNavOverlay = document.getElementById("fullscreenOverlayContainer");
-					
-					function playPauseFunction() {
-						if (videoPlayer.paused) {
-					    	videoPlayer.play();
-							playButton.innerHTML = "&#10074&#10074; Pause";
-						} else {
-					    	videoPlayer.pause();
-							playButton.innerHTML = "&#9658; Play";
-						}	
-					
-					}
 				</script>
 	        </div>
         </div> <!-- END OF CONTENT -->
